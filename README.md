@@ -1,2 +1,2 @@
 # Data-Structures
-Common data structures implemented in C
+Common data structures implemented in C++

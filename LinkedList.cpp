@@ -5,18 +5,19 @@ using namespace std;
 
 
 
-LinkedList:LinkedList()
+LinkedList::LinkedList()
 {
+	head = new Node;
 	head->value = NULL;
 	head->next = NULL;
 }
 
-void LinkedList::insertBeginning(node* newNode, int v)
+void LinkedList::insertBeginning(Node* newNode, int v)
 {
-	if(head == NULL)
+	if(head->value == NULL)
 	{
 		head->value = v;
-		head->next = NULL:
+		head->next = NULL;
 	}
 
 	else
@@ -27,6 +28,23 @@ void LinkedList::insertBeginning(node* newNode, int v)
 	}
 }
 
-void LinkedList::
+void LinkedList::removeBeginning()
+{
+	temp = head;
+	head = head->next;
+	free(temp);
+}
 
-};
+void LinkedList::traverse()
+{
+	int count = 0;
+	Node* temp = head;
+	cout << "Current state of the list: " << endl;
+	while(temp)
+	{
+		cout << "Node: " << count << " " << temp->value << endl;
+		temp = temp->next;
+		count++;
+	}
+}
+
